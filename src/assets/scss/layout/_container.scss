@@ -1,0 +1,25 @@
+$containers: (
+  xs: 100%,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  fluid: 100%,
+) !default;
+
+.container {
+  @include make-container();
+
+  @each $key, $media in $breakpoints {
+    @include media(">#{$media}") {
+      @include make-container();
+    }
+  }
+
+  @each $key, $value in $containers {
+    &--#{$key} {
+      max-width: $value;
+      @include make-container();
+    }
+  }
+}

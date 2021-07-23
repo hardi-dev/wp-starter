@@ -1,0 +1,40 @@
+// Color
+$color-black: #011627;
+$color-neutral-light: #fdfffc;
+
+// Fonts and Typography
+$font-size-base-lg: 16px;
+$font-size-base-sm: 16px;
+
+$font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// Breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+// Spacing
+$spacing: (
+  xs: 8px,
+  s: 16px,
+  m: 32px,
+  l: 64px,
+  xl: 96px,
+);
+
+// Z-Index
+$z-index: (
+  lv-1: 5,
+  lv-2: 10,
+  lv-3: 20,
+  lv-4: 30,
+  lv-5: 40,
+  header: 100,
+  modal: 200,
+  top: 300,
+);

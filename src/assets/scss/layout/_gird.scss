@@ -1,0 +1,30 @@
+// Grid
+$grid-columns: 8 !default;
+$grid-gutter-width: spacing(m) !default;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+    xs: 0,
+  // Small screen / phone
+    sm: map-get($breakpoints, sm),
+  // Medium screen / tablet
+    md: map-get($breakpoints, md),
+  // Large screen / desktop
+    lg: map-get($breakpoints, md),
+  // Extra large screen / wide desktop
+    xl: map-get($breakpoints, xk)
+);
+
+.grid {
+  @include make-row();
+
+  @for $i from 1 through $grid-columns {
+    &__col-#{$i} {
+      @include make-col($i);
+    }
+
+    &__offset-#{$i} {
+      @include make-col-offset($i);
+    }
+  }
+}

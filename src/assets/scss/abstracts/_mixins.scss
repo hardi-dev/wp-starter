@@ -1,0 +1,39 @@
+@mixin make-gradient($form: #26abe4, $to: #2983b8) {
+  background-color: $to;
+  background: linear-gradient(90deg, #{$form} 0%, #{$to} 100%);
+}
+
+@mixin aspect-ratio($ratio: 1 1, $selector: "> :first-child") {
+  $selector: unquote($selector);
+
+  padding-bottom: percentage(nth($ratio, 2) / nth($ratio, 1));
+  position: relative;
+
+  #{$selector} {
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+// Flex Center
+@mixin to-center($axis: xy) {
+  /* 
+  xy : Vertical and Horizontal
+  y: Vertical
+  x: Horizontal
+  */
+
+  display: flex;
+
+  @if $axis == x {
+    justify-content: center;
+  } @else if $axis == y {
+    align-items: center;
+  } @else {
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,40 @@
+/*
+Theme Name: Boilerplate WP
+Theme URI: https://www.wordpressify.co
+Author: Luan Gjokaj
+Author URI: https://www.riangle.com
+Description: WordPressify official theme.
+Version: 1.0
+Tags: responsive, clean, minimal, modern, documentation
+*/
+
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+// 2. Vendors
+@import "normalize-scss/sass/normalize";
+@import "include-media/dist/include-media";
+@import "bootstrap-scss/mixins/grid";
+
+// 3. Base stuff
+@import "base/base";
+@import "base/fonts";
+@import "base/typography";
+@import "base/helpers";
+
+// 4. Layout-related sections
+@import "layout/gird";
+@import "layout/container";
+@import "layout/header";
+@import "layout/footer";
+
+// 5. Components
+
+// 6. Page-specific styles
+
+// 7. Themes
+@import "themes/default";
